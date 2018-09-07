@@ -1,0 +1,48 @@
+
+<html>
+<head>
+    <title>Main Page</title>
+    
+</head>
+<body>
+    <style type="text/css">
+        #jsonMenu, #formMenu {
+            visibility: hidden;
+        }
+    </style>
+    
+    <script>
+    
+        function view(id){
+        document.getElementById(id).style.visibility = "visible";
+        }  
+            
+    
+        function hide(id) {
+        document.getElementById(id).style.visibility = "hidden";
+        }
+        
+    </script>
+
+
+    
+    <h2>Hoverable Dropdown</h2>
+    <p>Move the mouse over the button to open the dropdown menu.</p>
+    
+    <ul onMouseOver="view(jsonMenu)" onMouseOut="hide(jsonMenu)">JSON
+        <li id ="jsonMenu"><a href="trainers.html" style="position: absolute">JSON Manipulation</a></li>
+        <br>
+    
+   </ul> 
+    
+    <ul id ="formMenu" onMouseOver="view(formMenu)" onMouseOut="hide(formMenu)";>Form
+        <li><a href="form.html">Form Entry</a></li>
+        <li><a href="formData.html">Form Data</a></li>
+    
+   </ul> 
+     
+
+  
+
+</body>
+</html>

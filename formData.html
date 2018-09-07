@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style>
+    </style>
+</head>
+<body>
+    <pre>
+    <p id="result"></p>
+    </pre>
+    <script>
+    var retrievedObject = localStorage.getItem('testObject');
+
+    console.log('retrievedObject: ', JSON.parse(retrievedObject));
+
+    //var newRetObj = retrievedObject.split(",")
+        //document.write(newRetObj);
+        
+    document.getElementById("result").innerHTML = "<pre>" + JSON.stringify(retrievedObject,null,7) + "</pre>";
+    
+//        document.getElementById("result").innerHTML=(localStorage.getItem('testObject'));
+//        document.write(localStorage.getItem("two"));
+//        document.write(localStorage.getItem("three"));
+//        document.write(localStorage.getItem("four"));
+//        document.write(localStorage.getItem("five"));
+    </script>
+
+</body>
+</html>

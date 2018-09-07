@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style>
+    </style>
+</head>
+<body>
+    
+
+ <b> Search Trainer :  </b> <input type="text" name="search" id="userInput"> </input>
+<button onclick="search(searchFile)"> Search </button>
+<p id="searchResults"> </p>
+    
+    <script type="text/javascript" src="data.js">
+        
+        var searchFile = data;
+
+        
+    function search(searchFile) {
+
+			request.('GET', searchFile);
+
+			//request.responseType = 'json';
+
+			request.send();
+
+			request.onload = function () {
+
+
+			var requestData = request.response;
+
+			var searchValue = document.getElementById("userInput").value; 
+
+			var result = [];
+                
+			result.push(requestData.filter(a => Object.values(a).includes(searchValue)));
+
+			document.getElementById("searchResults").innerHTML = "<pre>" + JSON.stringify(result,null,7) + "</pre>";
+
+			}
+    }
+    
+    </script>
+<script>
+</script>
+</body>
+</html>
